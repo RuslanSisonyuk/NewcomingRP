@@ -1,0 +1,68 @@
+#home-selection-div{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 0.7s;
+    animation-name: animate-slide-in;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+    cursor: default;
+    transition: 0.7s;
+    height: 100vh;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 120%;
+    visibility: visible;
+}
+#home-selection-div > div{
+    width: 100%;
+    background: #07070746;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 7px #00000076;
+    transition: 0.5s;
+}
+#home-selection-div > div:hover{
+    scale: 1.05;
+}
+#home-selection-div > div:active{
+    scale: 0.95;
+}
+#home-selection-div > div span{
+    font-size: 2.5rem;
+}
+
+#home-title-div{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 90vh;
+    animation-duration: 1.5s;
+    animation-name: animate-fade;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    cursor: default;
+    transition: 0.7s;
+    overflow: hidden;
+}
+#home-title-div:hover{
+    scale: 1.05;
+}
+#home-title-div:active{
+    scale: 0.95;
+}
+
+.home-title, .home-bottom-title{
+    text-align: center;
+}
+.home-title{
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+.home-bottom-title{
+    font-size: 3rem;
+}
