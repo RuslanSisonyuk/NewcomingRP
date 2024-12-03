@@ -15,7 +15,11 @@ body{
     color: #ffffff;
     min-height: 100vh;
 
+<<<<<<< HEAD
     background-image: url(../images/orelatree_bg.png);
+=======
+    background-image: url(../images/orelatree_bg.png); /*../images/orelatree_bg.png*/
+>>>>>>> b24963f (added rules page contents)
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -114,6 +118,34 @@ body{
     animation-fill-mode:backwards;
 }
 .contents-div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    column-gap: 5rem;
+    width: 70vw;
+    height: 100%;
+    align-items:start;
+    justify-content: center;
+}
+.dropdown-section{
+    border-bottom: 2px solid#2d2d2d;
+    width: 100%;
+    transition: 0.3s;
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+}
+.dropdown-section > span{
+    font-size: 1.5rem;
+    color: #EACB89;
+    cursor: default;
+}
+.dropdown-section > p{
+    display: none;
+    transition: 0.3s;
+}
+
+.contents-div-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
     row-gap: 4rem;
