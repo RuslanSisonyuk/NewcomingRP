@@ -3,7 +3,7 @@ body{
     /* padding-left: 6rem;
     padding-right: 6rem; */
     box-sizing: border-box;
-    /* vjustify-content: center; */
+    /* justify-content: center; */
     /* justify-items: center; */
     /* align-items: center; */
     
@@ -15,7 +15,7 @@ body{
     color: #ffff;
     min-height: 100vh;
 
-    background-image: url(./styles/main_style.css);
+    background-image: url(/images/orelatree_bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
