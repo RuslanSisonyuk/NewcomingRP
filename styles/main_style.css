@@ -12,14 +12,10 @@ body{
     flex-direction: column;
     position: relative;
 
-    color: #ffffff;
+    color: #ffff;
     min-height: 100vh;
 
-<<<<<<< HEAD
-    background-image: url(../images/orelatree_bg.png);
-=======
     background-image: url(../images/orelatree_bg.png); /*../images/orelatree_bg.png*/
->>>>>>> b24963f (added rules page contents)
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
