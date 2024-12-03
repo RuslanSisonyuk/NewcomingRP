@@ -15,7 +15,7 @@ body{
     color: #ac5151;
     min-height: 100vh;
 
-    background-image: url(/images/orelatree_bg.png);
+    background-image: url(../images/orelatree_bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
