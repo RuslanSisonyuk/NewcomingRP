@@ -1,3 +1,8 @@
+::selection{
+    color: none;
+    background: none;
+}
+
 #home-selection-div{
     display: none;
     justify-content: center;
@@ -29,6 +34,7 @@
 }
 #home-selection-div > div:active{
     scale: 0.95;
+    color:#EACB89;
 }
 #home-selection-div > div span{
     font-size: 2.5rem;
@@ -50,6 +56,7 @@
 }
 #home-title-div:active{
     scale: 0.95;
+    color:#EACB89;
 }
 
 .home-title, .home-bottom-title{
@@ -63,7 +70,7 @@
     animation-name: animate-fade;
     animation-delay: 1s;
     animation-fill-mode: backwards;
-    transition: 0.7s;
+    /* transition: 0.7s; */
 }
 .home-bottom-title{
     font-size: 3rem;
@@ -72,5 +79,5 @@
     animation-name: animate-fade;
     animation-delay: 1.4s;
     animation-fill-mode: backwards;
-    transition: 0.7s;
+    /* transition: 0.7s; */
 }

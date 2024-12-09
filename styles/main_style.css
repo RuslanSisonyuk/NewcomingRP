@@ -68,6 +68,13 @@ body{
     color: #ffffff;
     font-size: 1.4rem;
 }
+.top-navbar > ul li a:hover {
+    transition: 0.3s;
+}
+.top-navbar > ul li a:hover {
+    /* font-size: 1.45rem; */
+    color:#EACB89;
+}
 
 .main-container{
     display: flex;
@@ -161,12 +168,13 @@ body{
 .contents-div-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-    row-gap: 4rem;
+    row-gap: 1rem;
     column-gap: 5rem;
     width: 85vw;
     height: 100%;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
     /* padding-right: 6rem;
     padding-left: 6rem; */
 }
@@ -175,6 +183,7 @@ body{
 }
 .contents-div-grid:has(.card:hover) .card:hover > p {
     opacity: 1;
+    margin-bottom: 30px;
 }
 .card{
     --random_rotation: 0.5deg;

@@ -1,6 +1,9 @@
 document.getElementById("home-title-div").addEventListener("click", function(){
-   document.getElementById("home-title-div").style.display = "none";
-   document.getElementById("home-selection-div").style.display = "flex";
+   document.getElementById("home-title-div").style.opacity = "0";
+   setTimeout(() => {
+      document.getElementById("home-title-div").style.display = "none";
+      document.getElementById("home-selection-div").style.display = "flex";
+   }, 500);
 });
 
 
