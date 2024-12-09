@@ -1,3 +1,7 @@
+* {
+    box-sizing:border-box;
+}
+
 body{
     margin: 0;
     /* padding-left: 6rem;
@@ -140,24 +144,50 @@ body{
     display: none;
     transition: 0.3s;
 }
-
+.contents-top-description{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 85vw;
+}
+.contents-top-description *{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.contents-top-description span{
+    font-size: 2.5rem;
+    color:#EACB89;
+}
 .contents-div-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
     row-gap: 4rem;
     column-gap: 5rem;
-    width: 70vw;
+    width: 85vw;
     height: 100%;
     align-items: center;
     justify-content: center;
     /* padding-right: 6rem;
     padding-left: 6rem; */
 }
-
+.contents-div-grid:has(.card:hover) .card:not(:hover) {
+    filter: blur(2px)
+}
+.contents-div-grid:has(.card:hover) .card:hover > p {
+    opacity: 1;
+}
 .card{
+    --random_rotation: 0.5deg;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    height: 100%;
+    transform: rotate(var(--random_rotation));
+    transition: 0.4s;
+}
+.card:hover{
+    scale: 1.05;
+    transform: rotate(0deg);
 }
 .card img{
     object-fit: cover;
@@ -169,12 +199,15 @@ body{
 .card span{
     color: #EACB89;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 5px;
 }
 .card p{
     text-align: center;
+    font-size: 1.1rem;
     margin: 0;
+    opacity: 0;
+    transition: 0.5s;
     /* margin-top: 10px; */
 }
 

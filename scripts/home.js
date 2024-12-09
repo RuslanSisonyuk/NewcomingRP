@@ -28,3 +28,9 @@ document.getElementById("home-rules-link").addEventListener("click", function(){
       window.location.href="rules.html";
    }, 600);
 });
+document.getElementById("home-starter-link").addEventListener("click", function(){
+   document.getElementById("home-selection-div").style.opacity = "0";
+   setTimeout(() => {
+      window.location.href="starter_guide.html";
+   }, 600);
+});
