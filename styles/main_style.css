@@ -30,12 +30,29 @@ body{
     font-style: normal;
 }
 
+#main-content{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-container{
+    margin: 0;
+    object-fit: cover;
+}
+
 .video-bg{
-    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    max-width: 100%;
     z-index: -1;
 }
 
@@ -43,9 +60,10 @@ body{
     display: flex;
     width: 100%;
     animation-duration: 0.5s;
-    /* animation-name: animate-fade; */
+    animation-name: animate-fade;
     animation-fill-mode:backwards;
     animation-delay: 0.05s;
+    transition: 0.5s;
 }
 .hideVisibility{
     visibility: hidden;

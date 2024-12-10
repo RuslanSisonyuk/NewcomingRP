@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/main_style.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,23 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <title>Newcoming</title>
 </head>
-<body style="overflow: hidden; padding: 0; align-items:center; justify-content: center;">
-    <!-- <video class="video-bg" autoplay muted loop>
-        <source src="videos/ruined.mp4" type="video/mp4">
-    </video> -->
-    <div id="home-title-div">
-        <span class="home-title">NEWCOMING<br>RP</span>
-        <span class="home-bottom-title">Venture into the wonderful world of Penora</span>
+<!-- overflow: hidden; -->
+<body style=" padding: 0; align-items:center; justify-content: center;">
+    <!-- <div class="video-container">
+        <video class="video-bg" autoplay muted loop>
+            <source src="videos/chinaboat.mp4" type="video/mp4">
+        </video>
+    </div> -->
+    <div class="top-navbar" style="display: none; opacity: 0;">
+        <ul>
+            <li class="pagelink"><a href="index.html">Home</a></li>
+            <li><a href="https://discord.gg/zHTANQqZN6">Discord</a></li>
+            <li class="pagelink"><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+            <li class="pagelink"><a href="starter_guide.html">Getting Started</a></li>
+            <li class="pagelink"><a href="lore.html">The Lore</a></li>
+            <li class="pagelink"><a href="guides.html">Mechanics</a></li>
+            <li class="pagelink"><a href="rules.html">Rules</a></li>
+        </ul>
     </div>
 
-    <div id="home-selection-div">
-        <div id="home-about-link"><span>About Newcoming</span></div>
-        <div id="home-starter-link"><span>Getting Started</span></div>
-        <div id="home-lore-link"><span>Lore Library</span></div>
-        <div id="home-guides-link"><span>Mechanics</span></div>
-        <div id="home-rules-link"><span>Rules</span></div>
+    <div id="main-content">
+        <div id="home-title-div">
+            <span class="home-title">NEWCOMING<br>RP</span>
+            <span class="home-bottom-title">Venture into the wonderful world of Penora</span>
+        </div>
+
+        <div id="home-selection-div">
+            <div id="home-about-link" class="homepage-link" href="./about.html"><span href="./about.html">What is Newcoming?</span></div>
+            <div id="home-starter-link" class="homepage-link" href="./starter_guide.html"><span href="./starter_guide.html">Getting Started</span></div>
+            <div id="home-lore-link" class="homepage-link" href="./lore.html"><span href="./lore.html">Lore Library</span></div>
+            <div id="home-guides-link" class="homepage-link" href="./guides.html"><span href="./guides.html">Mechanics</span></div>
+            <div id="home-rules-link" class="homepage-link" href="./rules.html"><span href="./rules.html">Rules</span></div>
+        </div>
     </div>
 </body>
 <script src="scripts/main.js"></script>
 <script src="scripts/home.js"></script>
+<script src="scripts/page_redirect.js"></script>
 </html>
