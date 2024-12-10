@@ -29,8 +29,14 @@ $("div").on("click",".homepage-link", function(event){
 });
 
 
-$("div").on("click",".pagelink-home", function(event){
+$("div").on("click",".pagelinkhome", function(event){
+   event.stopPropagation();
+   event.preventDefault();
    $("div.top-navbar").css("opacity","0");
+   $("div.main-container").css("opacity","0");
+
+   console.log("123");
+
    setTimeout(() => {
       let url = event.target.getAttribute("href");
       fetch(url)
