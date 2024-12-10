@@ -28,6 +28,25 @@ $("div").on("click",".homepage-link", function(event){
    }, 600);
 });
 
+
+$("div").on("click",".pagelink-home", function(event){
+   $("div.top-navbar").css("opacity","0");
+   setTimeout(() => {
+      let url = event.target.getAttribute("href");
+      fetch(url)
+      .then(response=>{
+         if(!response.ok) 
+            throw new Error('Page not found');
+         return response.text();
+      })
+      .then(data => {
+         console.log("success");
+         $("div.top-navbar").css("display","none");
+         document.getElementById("main-content").innerHTML = data;
+      })
+      .catch(error => console.error("Failed catching content: ",error));
+   }, 600);
+});
 // document.getElementById("home-lore-link").addEventListener("click", function(){
 //    document.getElementById("home-selection-div").style.opacity = "0";
 //    setTimeout(() => {
