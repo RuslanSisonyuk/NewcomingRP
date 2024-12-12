@@ -19,8 +19,8 @@ $("div").on("click",".homepage-link", function(event){
       })
       .then(data => {
          console.log("success");
-         $("div.top-navbar").css("display","flex");
-         $("div.top-navbar").css("opacity","1");
+         $("div.nav-item").css("display","flex");
+         $("div.nav-item").css("opacity","1");
 
          document.getElementById("main-content").innerHTML = data;
       })
@@ -32,10 +32,8 @@ $("div").on("click",".homepage-link", function(event){
 $("div").on("click",".pagelinkhome", function(event){
    event.stopPropagation();
    event.preventDefault();
-   $("div.top-navbar").css("opacity","0");
+   $("div.nav-item").css("opacity","0");
    $("div.main-container").css("opacity","0");
-
-   console.log("123");
 
    setTimeout(() => {
       let url = event.target.getAttribute("href");
@@ -47,46 +45,32 @@ $("div").on("click",".pagelinkhome", function(event){
       })
       .then(data => {
          console.log("success");
-         $("div.top-navbar").css("display","none");
+         $("div.nav-item").css("display","none");
          document.getElementById("main-content").innerHTML = data;
       })
       .catch(error => console.error("Failed catching content: ",error));
    }, 600);
 });
-// document.getElementById("home-lore-link").addEventListener("click", function(){
-//    document.getElementById("home-selection-div").style.opacity = "0";
-//    setTimeout(() => {
-//       fetch("/test.html")
-//       .then(response => response.text())
-//       .then(data => {
-//          document.getElementById("main-content").innerHTML = data;
-//       })
-//       .catch(err => console.error('Error loading page:', err));
-      
-//    }, 600);
-// });
-// document.getElementById("home-about-link").addEventListener("click", function(){
-//    document.getElementById("home-selection-div").style.opacity = "0";
-//    setTimeout(() => {
-//       window.location.href="about.html";
-//    }, 500);
-// });
-// document.getElementById("home-guides-link").addEventListener("click", function(e){
-//    document.getElementById("home-selection-div").style.opacity = "0";
-//    setTimeout(() => {
-//       window.location.href="guides.html";
-//    }, 600);
-// });
-// document.getElementById("home-rules-link").addEventListener("click", function(){
-//    document.getElementById("home-selection-div").style.opacity = "0";
-//    setTimeout(() => {
-//       window.location.href="rules.html";
-//    }, 600);
-// });
-// document.getElementById("home-starter-link").addEventListener("click", function(){
-//    document.getElementById("home-selection-div").style.opacity = "0";
-//    setTimeout(() => {
-//       window.location.href="starter_guide.html";
-//    }, 600);
-// });
 
+$('div.top-navbar-burgermenu-button').on("click","img",function(event){
+   console.log($('.top-navbar-burgermenu-contents').css("display"));
+   if($('.top-navbar-burgermenu-contents').css("display")=="none"){
+      $('div.main-container').css("opacity","0");
+      setTimeout(() => {
+         $('.main-container').css("display","none");
+         // $('div.main-content').css("display","none");
+         $('.top-navbar-burgermenu-contents').css("display","flex");
+         $('.top-navbar-burgermenu-contents').css("opacity","1");
+      }, 600);
+   }
+   else{
+      $('.top-navbar-burgermenu-contents').css("opacity","0");
+      setTimeout(() => {
+         $('.top-navbar-burgermenu-contents').css("display","none");
+         $('.main-container').css("display","flex");
+         $('div.main-container').css("opacity","1");
+
+         // $('div.main-content').css("display","flex");
+      }, 600);
+   }
+});

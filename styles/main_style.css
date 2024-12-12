@@ -59,7 +59,8 @@ body{
 }
 
 .top-navbar{
-    display: flex;
+    display: none;
+    opacity: 0;
     width: 100%;
     animation-duration: 0.5s;
     animation-name: animate-fade;
@@ -97,31 +98,67 @@ body{
 }
 
 .top-navbar-burgermenu-button{
-    display: flex;
-    justify-content: end;
-    align-items:end;
-    text-align: end;
-    width: 100%;
-}
-.top-navbar-burgermenu{
     display: none;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     align-items: center;
+    width: 100%;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-fill-mode:backwards;
+    animation-delay: 0.05s;
+    transition: 0.5s;
+}
+.top-navbar-burgermenu-button img{
+    object-fit: cover;
+}
+.top-navbar-burgermenu-contents{
+    display: none;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    animation-duration: 0.9s;
+    animation-name: animate-slide-in;
+    animation-fill-mode:backwards;
+    animation-delay: 0.2s;
+    transition: 0.5s;
+}
+.top-navbar-burgermenu-contents > ul{
+    display: flex;
+    flex-direction: column ;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    row-gap: 20px;
+    width: 100%;
+    height: 100vh;
+}
+.top-navbar-burgermenu-contents > ul li{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    text-align: center;
+    background: #07070773;
 
 }
-.top-navbar-burgermenu > ul li a {
+.top-navbar-burgermenu-contents > ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
-.top-navbar-burgermenu > ul li a:hover {
+.top-navbar-burgermenu-contents > ul li a:hover {
     transition: 0.3s;
-}
-.top-navbar-burgermenu > ul li a:hover {
-    /* font-size: 1.45rem; */
     color:#EACB89;
 }
+
 
 .main-container{
     display: flex;
@@ -333,17 +370,31 @@ body::-webkit-scrollbar-thumb {
         padding-left: 1rem;
         column-gap: 15px;
     }
+    /* .top-navbar-burgermenu-button{
+        display: none;
+    } */
+    
 }
-
+@media only screen and (min-width: 786px) {
+    .top-navbar-burgermenu-button{
+        display: none;
+    }
+    .top-navbar-burgermenu-button img{
+        display: none;
+    }
+}
 @media only screen and (max-width: 785px) {
     .top-navbar{
         display: none;
     }
+    .top-navbar-burgermenu-button{
+        display: flex;
+    }
+    .top-navbar-burgermenu-button img{
+        display: flex;
+    }
     .top-navbar > ul{
         display: none;
         /* opacity: 0.5; */
-    }
-    .top-navbar-burgermenu{
-        display: flex;
     }
 }
