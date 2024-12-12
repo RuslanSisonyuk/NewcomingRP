@@ -28,6 +28,8 @@ body{
     font-family: "Quintessential", serif;
     font-weight: 400;
     font-style: normal;
+
+    transition: 0.3s;
 }
 
 #main-content{
@@ -94,6 +96,33 @@ body{
     color:#EACB89;
 }
 
+.top-navbar-burgermenu-button{
+    display: flex;
+    justify-content: end;
+    align-items:end;
+    text-align: end;
+    width: 100%;
+}
+.top-navbar-burgermenu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.top-navbar-burgermenu > ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+.top-navbar-burgermenu > ul li a:hover {
+    transition: 0.3s;
+}
+.top-navbar-burgermenu > ul li a:hover {
+    /* font-size: 1.45rem; */
+    color:#EACB89;
+}
+
 .main-container{
     display: flex;
     flex-direction: column;
@@ -111,11 +140,17 @@ body{
     transition: 0.3s;
 }
 
+.top-title{
+    display: flex;
+    /* justify-content: center; */
+    align-items:center;
+}
 .top-title > span{
     font-size: 4rem;
+    text-align: center;
     
-    animation-name: animate-slide-right;
-    animation-delay: 1s;
+    animation-name: animate-opacity;
+    animation-delay: 1.4s;
     animation-duration: 1s;
     animation-fill-mode:backwards;
     cursor: default;
@@ -238,6 +273,10 @@ body{
     /* margin-top: 10px; */
 }
 
+@keyframes animate-opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+  }
 @keyframes animate-fade {
     0% { opacity: 0; 
       transform: scale(0.95, 0.95);}
@@ -286,4 +325,25 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
     border-radius: 6px;
     /* height: 10px; */
+}
+
+@media only screen and (max-width: 1168px) {
+    .top-navbar ul{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        column-gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 785px) {
+    .top-navbar{
+        display: none;
+    }
+    .top-navbar > ul{
+        display: none;
+        /* opacity: 0.5; */
+    }
+    .top-navbar-burgermenu{
+        display: flex;
+    }
 }
