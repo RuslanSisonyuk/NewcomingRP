@@ -399,20 +399,20 @@ body::-webkit-scrollbar-thumb {
     }
 }
 @media only screen and (max-width: 785px) {
+    body{
+        min-height: 100%;
+    }
     .top-navbar{
         display: none;
     }
-    .top-navbar-burgermenu{
-        display: flex;
-    }
     .top-navbar-burgermenu-button{
         display: flex;
+        
     }
     .top-navbar-burgermenu-button img{
         display: flex;
     }
     .top-navbar > ul{
         display: none;
-        /* opacity: 0.5; */
     }
 }
