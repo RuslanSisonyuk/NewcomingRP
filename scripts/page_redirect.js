@@ -2,6 +2,7 @@ $( "div" ).on("click",".pagelink", function(event){
    console.log("Event triggered");
    event.stopPropagation();
    event.preventDefault();
+   window.scrollTo({ top: 0, behavior: 'smooth' });
 
    $('.main-container').css("opacity",'0');
    setTimeout(() => {
@@ -15,7 +16,8 @@ $( "div" ).on("click",".pagelink", function(event){
       })
       .then(data => {
          document.getElementById("main-content").innerHTML = data;
+
       })
       .catch(error => {console.error('Error catching content: ',error)});
-   }, 600);
+   }, 800);
 });

@@ -2,6 +2,14 @@
     box-sizing:border-box;
 }
 
+::selection{
+    background: none;
+}
+span::selection,p::selection{
+    background: rgba(255, 255, 255, 0.375);
+    /* background: none; */
+}
+
 body{
     margin: 0;
     display: flex;
@@ -11,7 +19,7 @@ body{
     color: #ffff;
     min-height: 100vh;
 
-    background-image: url(../images/orelatree_bg.png); /*../images/orelatree_bg.png*/
+    background-image: url(../images/orella_tree_winter2.png); /*../images/orelatree_bg.png*/
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -260,6 +268,8 @@ body{
 .contents-top-description span{
     font-size: 2.5rem;
     color:#EACB89;
+    border-bottom: 4px solid #EACB89;
+
 }
 .contents-div-grid{
     display: grid;
@@ -316,6 +326,117 @@ body{
     /* margin-top: 10px; */
 }
 
+
+.contents-div{
+    display: flex;
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.info-section-contents{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 50px;
+    row-gap: 10px;
+}
+.info-section-contents p{
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+.info-section-contents div{
+    width: 100%;
+    height: 12rem;
+}
+.info-section-contents>div img{
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    /* object-fit: ; */
+}
+
+
+.paragraph-contents{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    column-gap: 3rem;
+    row-gap: 30px;
+}
+.paragraph-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.paragraph-section h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #EACB89;
+}
+.paragraph-section h4{
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    /* color:#EACB89; */
+}
+.paragraph-section p{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 0;
+}
+.paragraph-section a{
+    color:#EACB89;
+}
+
+.paragraph-section section{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+
+    column-gap: 1rem;
+    row-gap: 15px;
+}
+.paragraph-section section> .p-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.paragraph-image-div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.paragraph-image-div img{
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px #2d2d2d;
+}
+.paragraph-image-div span{
+    font-size: 0.9rem;
+    color:#B3B3B3;
+}
+
+.par-img-side{
+    flex-direction: row;
+}
+.par-img-bottom{
+    flex-direction: column;
+}
+.par-img-bottom div{
+    width: 90%;
+}
+.par-img-bottom img{
+    width: 100%;
+    height: 25rem;
+    object-fit: fill;
+}
 @keyframes animate-opacity {
     0% { opacity: 0; }
     100% { opacity: 1;}
@@ -377,7 +498,7 @@ body::-webkit-scrollbar-thumb {
         column-gap: 15px;
     }
 }
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 787px) {
     .top-navbar-burgermenu{
         display: none;
     }
