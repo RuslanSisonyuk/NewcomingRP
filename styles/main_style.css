@@ -532,7 +532,7 @@ body{
     outline: 1px solid #EACB89;
 }
 
-@supports (scrollbar-color: #373838 #eacb8971){
+/* @supports (scrollbar-color: #373838 #eacb8971){
     *{
         scrollbar-color: #eacb8952 #373838 ;
         scrollbar-width: thin;
@@ -540,7 +540,7 @@ body{
     :hover{
         scrollbar-color: #eacb89 #373838;
     }
-}
+} */
 
 @media only screen and (max-width: 1168px) {
     .top-navbar ul{
