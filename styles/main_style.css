@@ -512,13 +512,23 @@ body{
   }
 
 
+
+@supports (scrollbar-color: #eacb8961 #373838 ){
+    *{
+        scrollbar-color: #eacb8961 #373838 ;
+        scrollbar-width: thin;
+    }
+}
+
+
 ::-webkit-scrollbar {
-    background:#373838;
-    width: .3em;
+background:#373838;
+width: .3em;
 }
 ::-webkit-scrollbar-track {
-    margin-block: 5px;
+margin-block: 5px;
 }
+ 
 ::-webkit-scrollbar-thumb {
     background-color: #eacb8943;
     outline: 1px solid #eacb8900;
@@ -530,19 +540,8 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background-color: #EACB89;
     outline: 1px solid #EACB89;
-}
 
-@supports (scrollbar-color: #373838 #eacb8971){
-    *{
-        scrollbar-color: #eacb8952 #373838 ;
-        scrollbar-width: thin;
-        scrollbar-face-color: #00000000;
-    }
-    scrollbar:hover{
-        scrollbar-color: #eacb89 #373838;
-    }
 }
-
 @media only screen and (max-width: 1168px) {
     .top-navbar ul{
         padding-right: 1rem;
