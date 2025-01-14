@@ -21,3 +21,13 @@ $( "div" ).on("click",".pagelink", function(event){
       .catch(error => {console.error('Error catching content: ',error)});
    }, 800);
 });
+
+$('div').on("click","#page-contents-list li a",function(event){
+   event.stopPropagation();
+   event.preventDefault();
+   let element = event.target.getAttribute('href');
+   console.log("Scrolling to section.. "+element);
+   $('html, body').animate({
+      scrollTop: document.getElementById(element).offsetTop
+   }, 600);
+});

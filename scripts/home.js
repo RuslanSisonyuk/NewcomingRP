@@ -81,3 +81,8 @@ $('div.top-navbar-burgermenu-contents').on("click",".burgermenu-pagelink",functi
    }, 600);
 
 });
+
+
+$('div').on('click','.dropdown-section',function(){
+   $(this).children('p').toggle();
+});
