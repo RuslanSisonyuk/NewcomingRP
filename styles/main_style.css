@@ -276,12 +276,12 @@ body{
 
 }
 .contents-div-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-    /* display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); */
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-     */
+    
     row-gap: 1rem;
     column-gap: 5rem;
     width: 90%;
@@ -304,7 +304,8 @@ body{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: min(20%,1fr);
+    /* width: minmax(20%,20rem); */
+    width: 20rem;
     height: 20rem;
     transform: rotate(var(--random_rotation));
     transition: 0.4s;
@@ -552,11 +553,46 @@ margin-block: 5px;
     outline: 1px solid #EACB89;
 
 }
+
+@media only screen and (min-width: 1440px) {
+    /* .top-navbar ul{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        column-gap: 15px;
+    }
+     */
+    .card{
+        width: 25rem;
+        height: 20rem
+    }
+    .card img{
+        /* height: 20rem   ; */
+    }
+}
+@media only screen and (min-width: 2000px) {
+    /* .top-navbar ul{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        column-gap: 15px;
+    }
+     */
+    .card{
+        width: 35rem;
+        height: 25rem
+    }
+    .card img{
+        height: 25rem;
+    }
+}
 @media only screen and (max-width: 1168px) {
     .top-navbar ul{
         padding-right: 1rem;
         padding-left: 1rem;
         column-gap: 15px;
+    }
+    
+    .card{
+        width: 20rem;
     }
 }
 @media only screen and (min-width: 787px) {
@@ -646,6 +682,10 @@ margin-block: 5px;
         width: 90%;
         /* padding-left: 3rem;
         padding-right: 3rem; */
+    }
+
+    .card{
+        width: 15rem;
     }
 }
 
