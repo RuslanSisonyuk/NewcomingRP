@@ -335,7 +335,13 @@ body{
     transition: 0.5s;
     /* margin-top: 10px; */
 }
-
+.card-big{
+    width: 30rem;
+    height: 30rem;
+}
+.card-big img{
+    height: 22rem;
+}
 
 .contents-div{
     display: flex;
@@ -562,11 +568,19 @@ margin-block: 5px;
     }
      */
     .card{
-        width: 25rem;
-        height: 20rem
+        width: 20rem;
+        height: 20rem;
     }
     .card img{
-        /* height: 20rem   ; */
+        height: 12rem;
+    }
+    
+    .card-big{
+        width: 40rem;
+        height: 35rem;
+    }
+    .card-big img{
+        height: 22rem;
     }
 }
 @media only screen and (min-width: 2000px) {
@@ -577,11 +591,18 @@ margin-block: 5px;
     }
      */
     .card{
-        width: 35rem;
-        height: 25rem
+        width: 30rem;
+        height: 30rem
     }
     .card img{
-        height: 25rem;
+        height: 18rem;
+    }
+    .card-big{
+        width: 40rem;
+        height: 35rem;
+    }
+    .card-big img{
+        height: 22rem;
     }
 }
 @media only screen and (max-width: 1168px) {
@@ -680,12 +701,13 @@ margin-block: 5px;
 
     .contents-div{
         width: 90%;
-        /* padding-left: 3rem;
-        padding-right: 3rem; */
     }
-
-    .card{
-        width: 15rem;
+    .card-big{
+        width: 28rem;
+        height: 28rem;
+    }
+    .card-big img{
+        height: 16rem;
     }
 }
 
@@ -720,5 +742,12 @@ margin-block: 5px;
     }
     .infopost-agenda li a{
         font-size: 0.8rem;
+    }
+    .card-big{
+        width: 20rem;
+        height: 20rem;
+    }
+    .card-big img{
+        height: 12rem;
     }
 }
