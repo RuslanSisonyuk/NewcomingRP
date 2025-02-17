@@ -26,7 +26,8 @@ $("div").on("click",".homepage-link", function(event){
          $("div.nav-item").css("opacity","1");
 
          document.getElementById("main-content").innerHTML = data;
-         page_history.push(url);
+         if(page_history[page_history.length-1]!=url)
+            page_history.push(url);
       })
       .catch(error => console.error("Failed catching content: ",error));
    }, 600);
@@ -109,7 +110,8 @@ $( "div" ).on("click",".pagelink", function(event){
       })
       .then(data => {
          document.getElementById("main-content").innerHTML = data;
-         page_history.push(url);
+         if(page_history[page_history.length-1]!=url)
+            page_history.push(url);
       })
       .catch(error => {console.error('Error catching content: ',error)});
    }, 800);
