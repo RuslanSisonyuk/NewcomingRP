@@ -26,6 +26,7 @@ $("div").on("click",".homepage-link", function(event){
          $("div.nav-item").css("opacity","1");
 
          document.getElementById("main-content").innerHTML = data;
+         page_history.push(url);
       })
       .catch(error => console.error("Failed catching content: ",error));
    }, 600);
