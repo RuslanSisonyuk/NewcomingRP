@@ -615,6 +615,18 @@ margin-block: 5px;
     .card{
         width: 20rem;
     }
+    .card-big{
+        width: 30rem;
+        height: 26rem;
+    }
+    .card-big img{
+        height: 18rem;
+    }
+    
+    .paragraph-image-subsection-side img{
+        width: 15rem;
+        height: 12rem;
+    }
 }
 @media only screen and (min-width: 787px) {
     .top-navbar-burgermenu{
@@ -749,5 +761,9 @@ margin-block: 5px;
     }
     .card-big img{
         height: 12rem;
+    }
+    .paragraph-image-subsection-side img{
+        width: 100%;
+        height: 8rem;
     }
 }
