@@ -31,6 +31,11 @@ body{
     overflow: overlay;
     transition: 0.3s;
 }
+p,h4{
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 #main-content{
     position: relative;
@@ -373,6 +378,7 @@ body{
 
 .infopost-agenda{
     display: flex;
+    font-size: 1.1rem;
     flex-direction: column;
 
     /* width: 40%; */
@@ -408,7 +414,7 @@ body{
 .infopost-agenda li a{
     text-decoration: none;
     color:#ffffff;
-    /* font-size: 0.8rem; */
+    font-size: 1.1rem;
 }
 
 .infopost-contents{
