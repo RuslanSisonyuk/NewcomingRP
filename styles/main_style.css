@@ -387,6 +387,7 @@ p,h4{
     background: #2b2b2b86;
     box-shadow: inset 0 0 10px #000;
     width: 50%;
+    margin-top: 15px;
 }
 .infopost-agenda div:nth-child(1){
     display: flex;
@@ -395,7 +396,13 @@ p,h4{
 
     width: 100%;
     border-bottom: 1.5px solid #EACB89;
-    padding: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background: #eacb89e4;
+    border-radius: 5px 5px 0 0;
+    color:#202020;
+    font-weight: bold;
 }
 .infopost-agenda div:nth-child(2){
     padding-right: 15px;
@@ -409,6 +416,9 @@ p,h4{
 }
 .infopost-agenda li{
     font-style: italic;
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
     color:#fff;
 }
 .infopost-agenda li a{
@@ -417,6 +427,83 @@ p,h4{
     font-size: 1.1rem;
 }
 
+.infopost-header{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+.infopost-header-sidecard{
+    width: 20rem;
+    height: auto;
+
+    border: 2px solid #EACB89;
+    border-radius: 10px;
+    background: #2b2b2b86;
+    box-shadow: inset 0 0 10px #000;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+}
+.infopost-header-sidecard >div{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-top: 2px solid #EACB89;
+}
+.infopost-header-sidecard >img{
+    display: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.infopost-header-sidecard >img:first-of-type{
+    display: block;
+}
+.infopost-header-sidecard >div p:first-child{
+    width: 50%;
+}
+.infopost-header-sidecard >section{
+    padding-bottom: 5px;
+    background: #eacb89e4;
+    text-align: center;
+    border-radius:5px 5px 0 0;
+}
+.infopost-header-sidecard >section span{
+    color:#202020;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.infopost-header-sidecard >img{
+    border-top: 2px solid #EACB89;
+    border-bottom: 2px solid #EACB89;
+    width: 18rem;
+    /* height: 16rem; */
+    object-fit:fill;
+}
+.infopost-popup-imagegallery{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    background: #2b2b2bc9;
+    left: 0%;
+    top: 0%;
+    z-index: 10;
+    overflow: hidden;
+}
+.infopost-popup-imagegallery-imagecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 40rem;
+}
+.infopost-popup-imagegallery-imagecontainer img{
+    width: 20rem;
+}
 .infopost-contents{
     display: flex;
     flex-direction: column;
