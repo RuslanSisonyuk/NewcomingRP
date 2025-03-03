@@ -814,6 +814,14 @@ margin-block: 5px;
     .card-big img{
         height: 16rem;
     }
+    .infopost-header{
+        flex-direction: column-reverse;
+        row-gap: 15px;
+        /* align-items:center; */
+    }
+    .infopost-header-sidecard >img{
+        width: 19.8rem;
+    }
 }
 
 @media only screen and (max-width: 426px) {
@@ -858,5 +866,13 @@ margin-block: 5px;
     .paragraph-image-subsection-side img{
         width: 100%;
         height: 8rem;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .infopost-header-sidecard{
+        width: 16rem;
+    }
+    .infopost-header-sidecard >img{
+        width: 15.8rem;
     }
 }
