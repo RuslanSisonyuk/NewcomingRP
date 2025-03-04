@@ -147,3 +147,12 @@ $('div').on("click",".pagelinkhome",function(event){
       .catch(error => {console.error('Error catching content: ',error)});
    }
 });
+
+$('div').on('click',".infopost-header-sidecard img",function(event){
+   let active_image_index = $(this).index()-1;
+   let next_image_index = $(this).index();
+   if($(".infopost-header-sidecard").children('img').last().index()<=next_image_index) next_image_index=0;
+
+   $(".infopost-header-sidecard").children('img').eq(active_image_index).css("display","none");
+   $(".infopost-header-sidecard").children('img').eq(next_image_index).css("display","block");
+});
