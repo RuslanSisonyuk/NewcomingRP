@@ -433,15 +433,31 @@ p,h4{
     column-gap: 15px;
 }
 .infopost-header-sidecard{
-    width: 20rem;
+    width: 22rem;
     height: auto;
 
+    position: relative;
     border: 2px solid #EACB89;
     border-radius: 10px;
     background: #2b2b2b86;
     box-shadow: inset 0 0 10px #000;
     /* padding-top: 10px; */
     /* padding-bottom: 10px; */
+}
+
+.sidecard-buttons{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.sidecard-button-left{
+    bottom: 12px;
+    left: 0;
+}
+.sidecard-button-right{
+    bottom: 12px;
+    right: 0;
 }
 .infopost-header-sidecard >div{
     display: flex;
@@ -450,33 +466,44 @@ p,h4{
     padding-right: 10px;
     padding-left: 10px;
     border-top: 2px solid #EACB89;
+    column-gap: 20px;
 }
-.infopost-header-sidecard >img{
+.sidecard-images-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.infopost-header-sidecard >section img{
     display: none;
     cursor: pointer;
     margin-bottom: 10px;
 }
-.infopost-header-sidecard >img:first-of-type{
+.infopost-header-sidecard >section img:first-of-type{
     display: block;
 }
 .infopost-header-sidecard >div p:first-child{
     width: 50%;
+    padding-right: 10px;
+    /* margin-right: 20px; */
 }
-.infopost-header-sidecard >section{
+.infopost-header-sidecard >.sidecard-span{
     padding-bottom: 5px;
     background: #eacb89e4;
     text-align: center;
     border-radius:5px 5px 0 0;
 }
-.infopost-header-sidecard >section span{
+.infopost-header-sidecard >.sidecard-span span{
     color:#202020;
     font-size: 1.2rem;
     font-weight: bold;
 }
-.infopost-header-sidecard >img{
+.infopost-header-sidecard >section img{
     border-top: 2px solid #EACB89;
     border-bottom: 2px solid #EACB89;
-    width: 18rem;
+    width: 20rem;
     /* height: 16rem; */
     object-fit:fill;
 }
@@ -826,8 +853,12 @@ margin-block: 5px;
         row-gap: 15px;
         /* align-items:center; */
     }
-    .infopost-header-sidecard >img{
+    .infopost-header-sidecard >section img{
         width: 19.8rem;
+    }
+    
+    .sidecard-images-container{
+        /* width: 20rem; */
     }
 }
 
@@ -884,7 +915,7 @@ margin-block: 5px;
     .infopost-header-sidecard{
         width: 16rem;
     }
-    .infopost-header-sidecard >img{
+    .infopost-header-sidecard >section img{
         width: 15.8rem;
     }
 }
