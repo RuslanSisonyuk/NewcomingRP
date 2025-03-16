@@ -459,6 +459,30 @@ p,h4{
     bottom: 12px;
     right: 0;
 }
+.sidecard-image-dot-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding-bottom: 8px;
+
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+
+    width: 100%;
+    column-gap: 5px;
+}
+.sidecard-image-dot{
+    border: 4px solid #beb6a3bf;
+    border-radius: 10px;
+    /* background: #eacb8986; */
+    width: 8px;
+    height: 10px;
+}
+.sidecard-image-dot-on{
+    border: 4px solid #d4d2ccea;
+}
 .infopost-header-sidecard >div{
     display: flex;
     flex-direction: row;
