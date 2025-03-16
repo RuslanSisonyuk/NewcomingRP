@@ -341,11 +341,11 @@ p,h4{
     /* margin-top: 10px; */
 }
 .card-big{
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
 }
 .card-big img{
-    height: 22rem;
+    height: 18rem;
 }
 
 .contents-div{
@@ -583,7 +583,7 @@ p,h4{
 .paragraph-image-subsection-side img{
     width: 20rem;
     /* height: 15rem; */
-    object-fit: contain;
+    object-fit: cover;
 }
 .paragraph-image-subsection-bottom{
     display: flex;
@@ -710,14 +710,33 @@ margin-block: 5px;
     .card-big img{
         height: 22rem;
     }
+    .contents-div{
+        width: 60%;
+    }
+    .contents-top-description{
+        width: 60%;
+    }
 }
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2200px) {
     /* .top-navbar ul{
         padding-right: 1rem;
         padding-left: 1rem;
         column-gap: 15px;
     }
      */
+
+    .home-title{
+        font-size: 5.6rem !important;
+    }
+    .home-bottom-title{
+        font-size: 4.5rem !important;
+    }
+    #home-selection-div > div span {
+        font-size: 3rem !important;
+    }
+    .main-container {
+        min-height: 90vh;
+    }
     .card{
         width: 30rem;
         height: 30rem
@@ -731,6 +750,75 @@ margin-block: 5px;
     }
     .card-big img{
         height: 22rem;
+    }
+    .dropdown-section > span {
+        font-size: 1.7rem;
+    }
+    .dropdown-section > p {
+        font-size: 1.4rem;
+    }
+    
+    .infopost-section-chapter p{
+        font-size: 1.5rem;
+    }
+    .infopost-section h3{
+        font-size: 1.7rem;
+    }
+    .infopost-section h4{
+        font-size: 1.6rem;
+    }
+
+    .contents-top-description * {
+        font-size: 1.9rem;
+    }
+    .contents-top-description span{
+        font-size: 2.6rem;
+    }
+    .top-title span{
+        font-size: 4.4rem;
+    }
+
+    .card span{
+        font-size: 2.4rem;
+    }
+    .card p{
+        font-size: 1.5rem;
+    }
+    .top-navbar ul li a{
+        font-size: 1.9rem;
+    }
+    
+    .paragraph-container li {
+        font-size: 1.5rem;
+    }
+
+    .contents-div{
+        width: 60%;
+    }
+    .contents-top-description{
+        width: 60%;
+    }
+
+    .infopost-agenda {
+        font-size: 1.4rem;
+    }
+    .infopost-agenda ul {
+        margin-left: 10px;
+    }
+    .infopost-header-sidecard >div p {
+        font-size: 1.2rem;
+    }
+    .infopost-header-sidecard >.sidecard-span span {
+        font-size: 1.4rem;
+    }
+    .infopost-header-sidecard{
+        width: 18rem;
+    }
+    .infopost-header-sidecard >section img{
+        width: 17.8rem;
+    }
+    .paragraph-image-div span{
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 1168px) {
@@ -913,7 +1001,6 @@ margin-block: 5px;
         width: 100%;
         height: 8rem;
     }
-    
 }
 @media only screen and (max-width: 350px) {
     .infopost-header-sidecard{
