@@ -92,6 +92,18 @@ $('div').on('click','.dropdown-section',function(){
    $(this).children('p').toggle();
 });
 
+function createSidecardElements(){
+   $(".sidecard-images-container").append("<div class='sidecard-buttons sidecard-button-left'></div>");
+   $(".sidecard-images-container").append("<div class='sidecard-buttons sidecard-button-right'></div>");
+   let imageDotsContainer = $("<div></div>").addClass("sidecard-image-dot-container");
+   $(".sidecard-images-container").children("img").each(function(){
+      let imageDot = $("<div></div>").addClass("sidecard-image-dot");
+      if($(this).index()==0) imageDot.addClass("sidecard-image-dot-on");
+      console.log($(this).index());
+      imageDotsContainer.append(imageDot);
+   });
+   $(".sidecard-images-container").append(imageDotsContainer);
+}
 $( "div" ).on("click",".pagelink", function(event){
    console.log("Event triggered");
    event.stopPropagation();
@@ -110,6 +122,7 @@ $( "div" ).on("click",".pagelink", function(event){
       })
       .then(data => {
          document.getElementById("main-content").innerHTML = data;
+         if($(".infopost-header-sidecard").length) createSidecardElements();
          if(page_history[page_history.length-1]!=url)
             page_history.push(url);
       })
@@ -159,6 +172,8 @@ $('div').on('click',".infopost-header-sidecard .sidecard-button-right",function(
    if($(".sidecard-images-container").children('img').last().index()<next_image_index) next_image_index=0;
    $(".sidecard-images-container").children('img').eq(active_image_index).css("display","none");
    $(".sidecard-images-container").children('img').eq(next_image_index).css("display","block");
+   $(".sidecard-image-dot-container").children().eq(next_image_index).addClass("sidecard-image-dot-on");
+   $(".sidecard-image-dot-container").children().eq(active_image_index).removeClass("sidecard-image-dot-on");
 });
 
 $('div').on('click',".infopost-header-sidecard .sidecard-button-left",function(event){
@@ -172,4 +187,6 @@ $('div').on('click',".infopost-header-sidecard .sidecard-button-left",function(e
    if(next_image_index<0) next_image_index=$(".sidecard-images-container").children('img').last().index();
    $(".sidecard-images-container").children('img').eq(active_image_index).css("display","none");
    $(".sidecard-images-container").children('img').eq(next_image_index).css("display","block");
+   $(".sidecard-image-dot-container").children().eq(next_image_index).addClass("sidecard-image-dot-on");
+   $(".sidecard-image-dot-container").children().eq(active_image_index).removeClass("sidecard-image-dot-on");
 });
